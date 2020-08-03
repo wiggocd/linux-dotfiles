@@ -1,0 +1,6 @@
+# created by KDE Plasma, Thu Jul 30 17:02:49 2020
+#
+include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
+
+gtk-theme-name="oxygen-gtk"
+

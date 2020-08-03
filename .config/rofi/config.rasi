@@ -1,0 +1,5 @@
+configuration {
+	font: "Ubuntu 10";
+	modi: "window,run,ssh,drun";
+}
+@import "/usr/share/rofi/themes/glue_pro_blue.rasi"

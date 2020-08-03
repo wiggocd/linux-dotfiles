@@ -1,0 +1,64 @@
+#!/bin/sh
+
+getsink() {
+    SINKS=$(pactl list sinks short)
+    MAINSINK=$(echo $SINKS | grep -i 'running\|idle' | cut -d$'\t' -f1 | tail -1)
+    echo $MAINSINK
+}
+
+mute() {
+    pactl set-sink-mute $MAINSINK true
+}
+
+unmute() {
+    pactl set-sink-mute $MAINSINK false
+}
+
+togglemute() {
+    pactl set-sink-mute $MAINSINK toggle
+}
+
+voldown() {
+    unmute
+    pactl set-sink-volume $MAINSINK -5%
+}
+
+volup() {
+    unmute
+    pactl set-sink-volume $MAINSINK +5%
+}
+
+printusage() {
+    BASENAME=$(basename $0)
+    echo -e "\nUsage: $BASENAME [action]"
+    echo -e "actions:"
+    echo -e "\t unmute"
+    echo -e "\t mute"
+    echo -e "\t togglemute"
+    echo -e "\t voldown"
+    echo -e "\t volup\n"
+}
+
+if [ "$1" == "mute" ]
+then
+	getsink
+    mute
+elif [ "$1" == "unmute" ]
+then
+	getsink
+    unmute
+elif [ "$1" == "togglemute" ]
+then
+	getsink
+    togglemute
+elif [ "$1" == "voldown" ]
+then
+	getsink
+    voldown
+elif [ "$1" == "volup" ]
+then
+	getsink
+    volup
+else
+    printusage
+fi

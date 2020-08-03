@@ -1,0 +1,465 @@
+// 3rd-party apps, DE apps, etc.
+
+// Thunar
+.thunar {
+  :backdrop { color: $insensitive_fg_color; }
+  toolbar {
+		border-bottom: none;
+
+		// use non-symbolic icons
+		// wish i can resize that damn symbolic toolbar icon to 16px
+		-gtk-icon-style: regular;
+	}
+
+  .sidebar.frame { border-top: 1px solid $borders_color; }
+}
+
+// Xfce4-panel (gtk3)
+.xfce4-panel {
+	&, &.background {
+		background-color: if($light-panel == 'false', $dark_bg_color, $bg_color);
+		color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+
+		button, button:backdrop {
+    	background-color: transparent;
+	  	padding: 0 1px;
+	  	border: none;
+	  	border-radius: 0;
+	  	-gtk-icon-shadow: none;
+      text-shadow: none;
+      color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+      
+      label { all: unset }
+
+	  	&:hover, &:active, &:checked, &:active:hover, &:checked:hover {
+				box-shadow: inset 0 -3px $accent_primary;
+				border: none;
+				background: none;
+	  		transition: none;
+	  	}
+		}
+
+  	.tasklist button {
+    	margin: 2px 1px;
+    	border-radius: 3px;
+    	color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+    	border: 1px solid if($light-panel == 'false', $dark_borders_color, $borders_color);
+    	background-image: if($light-panel == 'true',
+                      	linear-gradient(to bottom,
+                                      	darken($bg_color, 4%),
+                                      	darken($bg_color, 5%),
+                                      	darken($bg_color, 8%)),
+                      	linear-gradient(to bottom,
+                                      	lighten($dark_bg_color, 8%),
+                                      	lighten($dark_bg_color, 7%),
+                                      	lighten($dark_bg_color, 4%)));
+    	box-shadow: inset 0 1px if($light-panel == 'true', rgba(white, 0.45), rgba(white, 0.08)),
+                	0 1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.05)),
+                	inset 0 0 0 1px if($light-panel == 'true', rgba(white, 0.05), rgba(white, 0.03)),
+                	inset 0 -1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.03));
+
+    	&:hover {
+      	background-image: if($light-panel == 'true',
+                        	linear-gradient(to bottom,
+                                        	$bg_color,
+                                        	darken($bg_color, 1%),
+                                        	darken($bg_color, 4%)),
+                        	linear-gradient(to bottom,
+                                        	lighten($dark_bg_color, 12%),
+                                        	lighten($dark_bg_color, 11%),
+                                        	lighten($dark_bg_color, 8%)));
+    	}
+
+    	&:active, &:checked, &:active:hover, &:checked:hover {
+      	background-image: if($light-panel == 'true', image(darken($bg_color, 12%)), image(darken($dark_bg_color, 4%)));
+      	box-shadow: inset 0 0 0 1px rgba(black, 0.05),
+                  	0 1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.05));
+    	}
+  	}
+
+		// Theme pulseaudio-plugin's mpris buttons
+  	#pulseaudio-button menu {
+    	-gtk-icon-effect: none;
+
+    	.linked button {
+      	@extend %linked;
+      	@extend %button_basic;
+    	}
+  	}
+  }
+}
+
+// LightDM gtk+ greeter (untested/experimental)
+.lightdm-gtk-greeter {
+  #panel_window menubar {
+    color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+    background-color: if($light-panel == 'false', $dark_bg_color, $bg_color);
+    // border-bottom: 1px solid  if($light-panel == 'false', $dark_borders_color, rgba(black, 0.5));
+    margin-bottom: 1px;
+    box-shadow: 0 1px if($variant == 'light', rgba(black, 0.22), $borders_color);
+    padding-bottom: 1px;
+
+    > box {
+      background-color: transparent;
+    }
+
+    > menuitem {
+      border-radius: 0;
+    }
+  }
+
+	#login_window,
+	#shutdown_dialog,
+	#restart_dialog {
+		border: none;
+    background-color: transparent;
+    box-shadow: none;
+
+    > box {
+      margin: 18px; // enlarge margins or shadow will cut off
+      border-radius: 5px;
+      box-shadow: 0 3px 9px 1px transparentize(black, 0.5),
+                  inset 0 1px $top_hilight,
+                  0 0 0 1px if($variant == 'light', rgba(black, 0.22), $borders_color);
+
+      background-color: $bg_color;
+      color: $fg_color;
+    }
+
+		button {
+			&#login_button,
+			&#restart_button {
+				@extend %button_suggested_action;
+			}
+
+			&#shutdown_button {
+				@extend %button_destructive_action;
+			}
+		}
+
+    #content_frame {
+      background-color: $bg_color;
+      margin: 4px 4px 0 4px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border: none;
+    }
+
+    #buttonbox_frame {
+      background-color: $bg_color;
+      margin: 0 4px 4px 4px;
+      border: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      padding-top: 16px;
+      padding-bottom: 0;
+    }
+
+    #greeter_infobar {
+      margin-left: 8px;
+      margin-right: 8px;
+      // cosmetic border-radius :)
+      border-radius: 3px;
+      box-shadow: none;
+    }
+	}
+
+	#login_window {
+		combobox button.combo {
+			background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      border-color: transparent;
+
+      font-size: 14pt;
+
+      &:hover { @include button(hover); }
+      &:active { @include button(active); }
+		}
+	}
+}
+
+// Caja / MATE file manager
+.caja-navigation-window {
+	.caja-side-pane {
+		scrolledwindow {
+			border: 0;
+		}
+
+		notebook {
+      		border-top: 1px solid $borders_color;
+
+      		.frame { border: none; }
+    	}
+	}
+
+	toolbar.primary-toolbar {
+    	border-bottom: 1px solid $borders_color;
+  	}
+
+  	.caja-notebook { // remove lateral borders
+    	&, .frame {
+      		border-width: 1px 0 1px;
+    	}
+
+    	> header.top { // revive top-border when tabs are shown
+      		border-top: 1px solid $borders_color;
+    	}
+  	}
+}
+
+// gnome-control-center (3.26) sidebar
+scrolledwindow.view > viewport.frame > stack > list {
+  background-color: $sidebar_bg_color;
+  &:backdrop { background-color: $backdrop_sidebar_bg_color; }
+
+  > row.activatable {
+    padding: 0;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    &:selected {
+      &, &:focus {
+        color: $fg_color;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba(black, 0.11), rgba(black, 0.07));
+        border-image: linear-gradient(to bottom,
+                                      rgba(black, 0.25),
+                                      if($variant == 'light', rgba(white, 0.3), rgba(white, 0.05)))
+                                      1 1 1 1;
+        border-style: solid;
+        border-width: 1px 0;
+
+        box-shadow: inset 0 1px 0 0 rgba(black, 0.03),
+                    inset 0 -1px 0 0 rgba(black, 0.1);
+
+        label { color: $fg_color; }
+      }
+
+      &:hover {
+        background-color: lighten($sidebar_bg_color, 1.1%);
+      }
+
+      &:backdrop {
+        &, &:focus {
+          color: $backdrop_fg_color;
+          background-color: transparent;
+          background-image: linear-gradient(to bottom,
+                                            if($variant == 'light', rgba(black, 0.04), rgba(black, 0.08)),
+                                            rgba(black, 0.03));
+          border-image: linear-gradient(to bottom,
+                                        if($variant == 'light', rgba(black, 0.15), rgba(black, 0.19)),
+                                        if($variant == 'light', rgba(white, 0.25), rgba(white, 0.1)))
+                                        1 1 1 1;
+
+          label { color: $backdrop_fg_color; }
+        }
+      }
+    }
+  }
+}
+
+// GNOME Tweaks
+.tweak-categories {
+  background-color: $sidebar_bg_color;
+  &:backdrop { background-color: $backdrop_sidebar_bg_color; }
+
+  separator.horizontal {
+    min-height: 0;
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.tweak-category {
+  background-color: transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+
+  &.activatable {
+    &:selected {
+      &, &:focus {
+        color: $fg_color;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba(black, 0.11), rgba(black, 0.07));
+        border-image: linear-gradient(to bottom,
+                                      rgba(black, 0.25),
+                                      if($variant == 'light', rgba(white, 0.3), rgba(white, 0.05)))
+                                      1 1 1 1;
+        border-style: solid;
+        border-width: 1px 0;
+
+        box-shadow: inset 0 1px 0 0 rgba(black, 0.03),
+                    inset 0 -1px 0 0 rgba(black, 0.1);
+
+        label { color: $fg_color; }
+      }
+
+      &:hover {
+        background-color: lighten($sidebar_bg_color, 1.1%);
+      }
+
+      &:backdrop {
+        &, &:focus {
+          color: $backdrop_fg_color;
+          background-color: transparent;
+          background-image: linear-gradient(to bottom,
+                                            if($variant == 'light', rgba(black, 0.04), rgba(black, 0.08)),
+                                            rgba(black, 0.03));
+          border-image: linear-gradient(to bottom,
+                                        if($variant == 'light', rgba(black, 0.15), rgba(black, 0.19)),
+                                        if($variant == 'light', rgba(white, 0.25), rgba(white, 0.1)))
+                                        1 1 1 1;
+
+          label { color: $backdrop_fg_color; }
+        }
+      }
+    }
+  }
+}
+
+// Nemo file manager
+.nemo-desktop.nemo-canvas-item {
+  color: $selected_fg_color;
+  text-shadow: 1px 1px black;
+
+  &:active,
+  &:hover,
+  &:selected {
+    color: $selected_fg_color;
+    text-shadow: none;
+  }
+
+  &:selected:backdrop {
+    color: $backdrop_fg_color;
+  }
+}
+
+.nemo-window {
+  grid.vertical > paned.horizontal > box.vertical {
+    > scrolledwindow.frame {
+      border-width: 0;
+    }
+  }
+
+  .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 3px;
+
+    @include entry(focus);
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+  }
+
+  grid.vertical > widget {
+    @extend %toolbar;
+    border-bottom-width: 0;
+
+    > box {
+      padding: 0;
+    }
+
+    > box > button.image-button {
+      @include button(undecorated);
+
+      &:hover { @include button(hover); }
+
+      &:active, &:checked {
+        @include button(active);
+        &:disabled { @include button(insensitive-active); }
+      }
+
+      &:disabled { @include button(insensitive); }
+
+      &:backdrop {
+        &:active, &:checked { @include button(backdrop-active); }
+
+        &:disabled { @include button(backdrop-insensitive) }
+      }
+    }
+  }
+
+  .floating-bar {
+    padding: 1px;
+    background-color: $base_color;
+    border-width: 1px;
+    border-style: solid solid none;
+    border-color: $borders_color;
+    border-radius: 3px 3px 0 0;
+
+    &.bottom.left {
+      border-left-style: none;
+	    border-top-left-radius: 0;
+    }
+
+    &.bottom.right {
+      border-right-style: none;
+	    border-top-right-radius: 0;
+    }
+
+    &:backdrop {
+      background-color: $backdrop_base_color;
+      border-color: $backdrop_borders_color;
+    }
+  }
+}
+
+.nemo-canvas-item,
+.nemo-dim-list-label {
+  &:selected {
+    background-color: $accent_primary;
+    color: $selected_fg_color;
+    border-radius: 3px;
+  }
+}
+
+// Vala-panel Appmenu applet
+widget.-vala-panel-appmenu-core { // appmenu applets
+  menubar > menuitem {
+    font-weight: bold;
+
+    label {
+      &, &:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); } // utter-crap workaround
+
+      .accelerator { font-weight: bold; } // App title?
+    }
+
+    menu > menuitem {
+      font-weight: normal;
+
+      label { color: $fg_color; }
+      &:hover label { color: $selected_fg_color; }
+      &:disabled label { color: $insensitive_fg_color; }
+    }
+  }
+}
+
+// Xed text editor
+.xed-window {
+  .xed-statusbar {
+    border-top: 1px solid $borders_color;
+  }
+
+  .xed-searchbar {
+    box-shadow: inset 0 1px $borders_color;
+  }
+
+  // hack to get margin in 'Match filename' entry box
+  paned > widget > box > notebook > stack > box {
+    > expander {
+      border-top: 1px solid $borders_color;
+	    padding: 6px;
+    }
+
+    > expander > box {
+      margin: 6px 2px;
+    }
+  }
+}
+
+// Misc
+.h1 { // this actually elementary/granite-specific
+  font-size: 18pt;
+  font-weight: 300; 
+}

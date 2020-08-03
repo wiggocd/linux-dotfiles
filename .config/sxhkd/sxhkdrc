@@ -1,0 +1,5 @@
+alt + d
+	~/scripts/runmenu
+
+alt + Return
+	~/scripts/terminal

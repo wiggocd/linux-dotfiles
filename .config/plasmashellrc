@@ -1,0 +1,27 @@
+[DownloadDialog Settings]
+Height 1080=506
+Width 1920=700
+
+[KFileDialog Settings]
+Recent Files[$e]=mojave-day.jpg,file:$HOME/Pictures/Wallpaper/Catalina-Afternoon-Res.jpg,file:$HOME/Pictures/Wallpaper/mojave-day.jpg
+Recent URLs[$e]=file:$HOME/Pictures/Wallpaper/
+detailViewIconSize=0
+iconViewIconSize=43
+
+[PlasmaTransientsConfig]
+PreloadWeight=4
+
+[PlasmaViews][Panel 2]
+alignment=132
+
+[PlasmaViews][Panel 2][Defaults]
+thickness=27
+
+[PlasmaViews][Panel 2][Horizontal1920]
+thickness=30
+
+[ScreenConnectors]
+0=HDMI-1
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js
