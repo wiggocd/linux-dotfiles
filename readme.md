@@ -1,2 +1,2 @@
 # dotfiles
-A configuration for Arch Linux
+A configuration for Arch Linux.
