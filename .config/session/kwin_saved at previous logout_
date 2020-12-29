@@ -1,5 +1,5 @@
 [Session]
-active=-1
+active=1
 activities1=
 activities2=
 count=2
@@ -26,8 +26,8 @@ resourceName1=plasmashell
 resourceName2=plasmashell
 restore1=0,0,1920,1080
 restore2=0,0,1920,28
-sessionId1=10105dbd1dd000160920259900000012320001
-sessionId2=10105dbd1dd000160920259900000012320001
+sessionId1=10105dbd1dd000160925708300000326600002
+sessionId2=10105dbd1dd000160925708300000326600002
 shaded1=false
 shaded2=false
 shortcut1=

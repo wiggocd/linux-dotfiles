@@ -1,5 +1,5 @@
 [General]
-history=konsole,latte,kons,gedit
+history=qt5ct,konsole,latte,kons,gedit
 
 [PlasmaRunnerManager]
-LaunchCounts=1 services_applications:org.kde.konsole.desktop
+LaunchCounts=1 services_applications:org.kde.konsole.desktop,1 shell_qt5ct

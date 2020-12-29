@@ -176,12 +176,14 @@ bindsym $mod+r mode "resize"
 # Misc
 ##################################
 
+#
 # Gaps
 #
-gaps inner 8
-gaps outer 6
-gaps top 20
+gaps inner 4
+gaps outer 4
+gaps top 24
 
+#
 # Window properties
 #
 for_window [class=".*"] border none
@@ -189,6 +191,7 @@ for_window [window_role="notification"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
+#
 # Miscellaneous keybinds
 #
 bindcode --release 133 exec --no-startup-id ~/scripts/appmenu
@@ -203,10 +206,10 @@ bindsym Control+Mod1+r exec reboot
 
 bindsym Control+Mod1+1 exec firefox &
 
-# Mousewheel
 bindsym $mod+x workspace next
 bindsym $mod+c workspace prev
 
+#
 # Autoexec
 #
 exec_always --no-startup-id ~/scripts/environment.sh
@@ -215,5 +218,3 @@ exec_always --no-startup-id hsetroot -cover ~/.config/wallpaper.jpg
 exec_always --no-startup-id picom --config ~/.config/picom.conf --backend glx &
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 exec_always --no-startup-id ~/scripts/i3-alternating-layout.py
-
-

@@ -25,7 +25,7 @@ Configuration for Arch Linux kernel version 5.9.14
 - openbox
 
 # Packages
-`i3-wm` `alacritty` `rofi` `hsetroot` `polybar` `python3` `qt5ct` `lxappearance` `plasma-meta` `ly`
+`i3-wm` `alacritty` `rofi` `hsetroot` `polybar` `python3` `qt5ct` `lxappearance` `i3lock-fancy` `plasma-meta` `ly`
 
 AUR: `picom-ibhagwan-git`
 
@@ -38,6 +38,7 @@ AUR helper used: `pikaur`
 ____
 
 - Use `lxappearance` and `qt5ct` to set themes
+- To fix application theming when switching to Plasma, remove the line `export QT_QPA_PLATFORMTHEME=...` from `.xinitrc`. Keep this when using other WMs
 - To use the Firefox configuration, go to Firefox > about:config > search for stylesheets and enable the legacy profiles option
 
 # i3 Bindings
@@ -55,6 +56,8 @@ ____
 **Close window**: mod + shift + Q
 
 **Exit i3**: mod + shift + E
+
+See the i3 wiki for the other standard shortcuts such as workspace switching.
 ____
 
 Enjoy!

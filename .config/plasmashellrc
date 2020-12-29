@@ -9,7 +9,7 @@ detailViewIconSize=0
 iconViewIconSize=43
 
 [PlasmaRunnerManager]
-LaunchCounts=3 services_applications:org.kde.konsole.desktop
+LaunchCounts=3 services_applications:org.kde.konsole.desktop,2 services_applications:org.gnome.Nautilus.desktop
 
 [PlasmaViews][Panel 2]
 alignment=132

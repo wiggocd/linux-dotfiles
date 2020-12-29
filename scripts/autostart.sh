@@ -15,4 +15,3 @@ killall polybar &&
 picom --config ~/.config/picom.conf --backend glx &
 sxhkd &
 ~/.config/polybar/launch.sh &
-python ~/scripts/i3-alternating-layout.py
