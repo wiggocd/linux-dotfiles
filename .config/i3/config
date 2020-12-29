@@ -215,6 +215,6 @@ bindsym $mod+c workspace prev
 exec_always --no-startup-id ~/scripts/environment.sh
 exec_always --no-startup-id hsetroot -cover ~/.config/wallpaper.png
 exec_always --no-startup-id hsetroot -cover ~/.config/wallpaper.jpg
-exec_always --no-startup-id picom --config ~/.config/picom.conf --backend glx &
+exec_always --no-startup-id ~/.config/picom/launch.sh &
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 exec_always --no-startup-id ~/scripts/i3-alternating-layout.py

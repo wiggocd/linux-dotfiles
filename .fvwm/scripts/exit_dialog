@@ -1,0 +1,1 @@
+i3-nagbar -m "Do you want to exit FVWM?" -b "Yes" "killall fvwm"

@@ -1,0 +1,29 @@
+
+(teams:4597): GLib-GIO-CRITICAL **: 23:10:22.094: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(teams:4597): GLib-GIO-CRITICAL **: 23:10:22.094: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(teams:4597): GLib-GIO-CRITICAL **: 23:10:22.094: g_dbus_connection_get_unique_name: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+(node:4597) UnhandledPromiseRejectionWarning: ReferenceError: window is not defined
+    at /usr/share/teams/resources/app.asar/node_modules/ipc-monitor/renderer/dom-observables.js:31:5
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/usr/share/teams/resources/app.asar/node_modules/ipc-monitor/renderer/dom-observables.js:30:30)
+    at Object.<anonymous> (/usr/share/teams/resources/app.asar/node_modules/ipc-monitor/renderer/dom-observables.js:62:3)
+    at Module._compile (/usr/share/teams/resources/app.asar/external/v8-compile-cache/v8-compile-cache.js:192:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:704:10)
+    at Module.load (internal/modules/cjs/loader.js:602:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:541:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:533:3)
+    at Module.require (internal/modules/cjs/loader.js:640:17)
+(node:4597) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:4597) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:4597) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 appInitialized listeners added. Use emitter.setMaxListeners() to increase limit
+(node:4597) UnhandledPromiseRejectionWarning: undefined
+(node:4597) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:4597) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 ecsSettingsUpdated listeners added. Use emitter.setMaxListeners() to increase limit
+
+(teams:4597): libnotify-WARNING **: 23:11:25.220: Failed to connect to proxy
+
+(teams:4597): libnotify-WARNING **: 23:11:25.220: Failed to connect to proxy
+
+(teams:4597): libnotify-WARNING **: 23:11:25.220: Failed to connect to proxy

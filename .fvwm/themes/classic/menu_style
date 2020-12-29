@@ -1,0 +1,35 @@
+#  IMPORTANT! Colorset numeration
+#  convention given in manuals is:
+#    0 = Default colors
+#    1 = Inactive windows
+#    2 = Active windows
+#    3 = Inactive menu entry and menu background
+#    4 = Active menu entry
+#    5 = greyed out menu entry (only bg used)
+#    6 = module foreground and background
+#    7 = hilight colors
+
+#  fg - text, bg - background, the rest is for borders
+
+Colorset 3 fg #2E3436, bg #cccccc, sh #777777, hi #aaaaaa
+
+#  selected item highligt:
+
+Colorset 7 fg #eeeeee
+
+#  enable colorsets
+
+MenuStyle * MenuColorset 3
+MenuStyle * ActiveColorset 7
+
+#  purge 3D 
+
+MenuStyle * SeparatorsLong, TrianglesSolid
+
+#  other nice things
+
+MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
+MenuStyle "*" PopupOffset 2 100
+
+#  only works with patched
+

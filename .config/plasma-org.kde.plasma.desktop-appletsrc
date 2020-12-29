@@ -69,7 +69,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][4][Applets][5][Configuration]
-PreloadWeight=89
+PreloadWeight=92
 
 [Containments][4][Applets][5][Configuration][General]
 favoritesPortedToKAstats=true

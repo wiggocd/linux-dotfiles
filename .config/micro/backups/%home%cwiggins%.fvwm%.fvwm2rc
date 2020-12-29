@@ -1,0 +1,120 @@
+######################
+# Environment variables
+######################
+SetEnv fvwm_img $[FVWM_USERDIR]/images
+SetEnv fvwm_icon $[FVWM_USERDIR]/icons
+SetEnv fvwm_scrpt $./scripts
+SetEnv fvwm_wallpapers $[FVWM_USERDIR]/wallpaper
+
+SetEnv fvwm_webbrowser /usr/bin/firefox
+SetEnv fvwm_term /usr/bin/alacritty
+SetEnv fvwm_media_player /usr/bin/qmusic
+
+######################
+# Image path
+######################
+ImagePath $[fvwm_icon]:$[fvwm_icon];.png:$[fvwm_wallpapers]:+
+
+
+######################
+# Virtual desktops
+######################
+DesktopSize 3x3
+DesktopName 0 Main
+EdgeScroll 100 100
+EdgeResistance 150  150
+EdgeThickness 1
+
+
+######################
+# Mouse and foucs behaviour
+######################
+ClickTime 350
+MoveThreshold 3
+Style * SloppyFocus, MouseFocusClickRaises
+
+
+######################
+# Global styles and options
+######################
+Style * TileCascadePlacement, GrabFocusOff
+Style * NoPPosition, ResizeOpaque
+OpaqueMoveSize -1
+Emulate MWM
+HideGeometryWindow Never
+SnapAttraction 5 SameType Screen
+SnapGrid 3 3
+XorValue 55555
+Style * DecorateTransient, DontRaiseTransient
+Style * DontLowerTransient, StackTransientParent
+Style * GrabFocusTransientOff
+Style * WindowShadeSteps 20, WindowShadeScrolls
+SetAnimation  10  -.01 0 .01 .03 .08 .18 .3 .45 .6 .75 .85 .90 .94 .97 .99 1.0
+Style * MwmDecor, SlipperyIcon
+Style * IconBox screen w 15 15 -165 -15, IconGrid 3 3, IconFill right top
+
+
+######################
+# Basic functions
+######################
+DestroyFunc FvwmDeleteOrDestroy
+AddToFunc   FvwmDeleteOrDestroy
++ H Nop
++ M Nop
++ C Delete
++ D Destroy
+
+DestroyFunc FvwmIconifyOrShade
+AddToFunc   FvwmIconifyOrShade
++ C Iconify
++ D WindowShade
+
+DestroyFunc FvwmMaximize
+AddToFunc   FvwmMaximize
++ H Nop
++ M Nop
++ C Maximize $0 $1
+
+DestroyFunc FvwmMoveOrIconify
+AddToFunc   FvwmMoveOrIconify
++ M Move
++ D Iconify
+
+DestroyFunc FvwmWindowShade
+AddToFunc   FvwmWindowShade
++ D WindowShade $0
+
+######################
+# Program functions
+######################
+DestroyFunc	FvwmCommon
+AddToFunc	FvwmCommon
++I Exec exec alacritty
++I Exec exec firefox
+
+DestroyFunc FvwmViewManPage
+AddToFunc   FvwmViewManPage
++ I Exec exec xterm -fg White -bg DarkBlue -g 80x40 -fn 7x14 -fb 7x14bold \
+ -n "Manual Page - $0" -T "Manual Page - $0" -e man "$0"
+
+
+######################
+# Startup functions
+######################
+DestroyFunc StartFunction
+AddToFunc   StartFunction
++ I Module FvwmTaskBar
++ I Module FvwmPager 0 2
++ I Module FvwmButtons MyButtons
+
+DestroyFunc InitFunction
+AddToFunc   InitFunction
++ I Exec exec xscreensaver
++ I Exec exec fvwm-root -r $[fvwm_wallpapers]/background.png
++ I FvwmXmms
++ I FvwmATerm
+
+DestroyFunc RestartFunction
+AddToFunc   RestartFunction
++ I Nop
+

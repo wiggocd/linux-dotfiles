@@ -6,15 +6,15 @@ count=0
 
 [Session: saved at previous logout]
 clientId1=10105dbd1dd000160312701200000011970018
-clientId2=10105dbd1dd000160925708300000326600005
-clientId3=10105dbd1dd000160920380200000028620011
+clientId2=10105dbd1dd000160920380200000028620011
+clientId3=10105dbd1dd000160926657200000026000006
 count=3
 program1=/usr/lib/baloorunner
-program2=pulseaudio
-program3=/usr/lib/xdg-desktop-portal-kde
-restartCommand1=/usr/lib/baloorunner,-session,10105dbd1dd000160312701200000011970018_1609257143_502105
-restartCommand2=
-restartCommand3=/usr/lib/xdg-desktop-portal-kde,-session,10105dbd1dd000160920380200000028620011_1609257143_502392
+program2=/usr/lib/xdg-desktop-portal-kde
+program3=pulseaudio
+restartCommand1=/usr/lib/baloorunner,-session,10105dbd1dd000160312701200000011970018_1609266620_178864
+restartCommand2=/usr/lib/xdg-desktop-portal-kde,-session,10105dbd1dd000160920380200000028620011_1609266620_178938
+restartCommand3=
 restartStyleHint1=0
 restartStyleHint2=0
 restartStyleHint3=0

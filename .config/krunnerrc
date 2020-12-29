@@ -1,5 +1,5 @@
 [General]
-history=qt5ct,konsole,latte,kons,gedit
+history=teams,firefox,qt5ct,konsole,latte,kons,gedit
 
 [PlasmaRunnerManager]
-LaunchCounts=1 services_applications:org.kde.konsole.desktop,1 shell_qt5ct
+LaunchCounts=1 services_applications:firefox.desktop,1 windows_0_65011713,1 services_applications:org.kde.konsole.desktop,1 shell_qt5ct
