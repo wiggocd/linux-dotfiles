@@ -1,0 +1,5 @@
+alsa_card.pci-0000:01:00.1:output:hdmi-output-2 mute:0 volumes:2,1.000000,1.000000
+alsa_card.usb-BLUE_MICROPHONE_Blue_Icicle_200909-00:input:analog-input-mic mute:0 volumes:2,0.910614,0.910614
+alsa_card.pci-0000:00:1b.0:output:analog-output-lineout mute:0 volumes:2,0.825409,0.825409
+alsa_card.usb-046d_0825_88122BA0-02:input:analog-input-mic mute:0 volumes:1,0.794312
+alsa_card.pci-0000:01:00.1:output:hdmi-output-0 mute:0 volumes:2,1.000000,1.000000

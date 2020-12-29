@@ -3,12 +3,12 @@ downloadWindowSize=800,550
 windowSize=700,668
 
 [LatteSettingsDialog][TabLayouts]
-columnWidths=48,76,77,0
+columnWidths=49,76,77,0
 sortColumn=3
 sortOrder=0
 
 [PlasmaRunnerManager]
-LaunchCounts=3 services_applications:org.kde.konsole.desktop,1 services_applications:org.gnome.gedit.desktop
+LaunchCounts=1 services_applications:pavucontrol.desktop,1 services_applications:org.gnome.gedit.desktop,3 services_applications:org.kde.konsole.desktop,1 services_applications:code-oss.desktop
 
 [PlasmaThemeExtended]
 outlineWidth=1
@@ -19,14 +19,16 @@ outlineWidth=1
 [UniversalSettings]
 badges3DStyle=false
 canDisableBorders=false
-currentLayout=My Layout
+currentLayout=Dock with Bar
 hiddenConfigurationWindowsAreDeleted=true
-lastNonAssignedLayout=My Layout
+inAdvancedModeForEditSettings=true
+lastNonAssignedLayout=Dock with Bar
 launchers=
 memoryUsage=0
 metaPressAndHoldEnabled=true
 mouseSensitivity=2
 screenTrackerInterval=2500
 showInfoWindow=true
+singleModeLayoutName=Dock with Bar
 userConfiguredAutostart=true
 version=2

@@ -1,0 +1,3 @@
+alsa_card.pci-0000:00:1b.0 output:analog-stereo
+alsa_card.usb-BLUE_MICROPHONE_Blue_Icicle_200909-00 input:analog-stereo
+alsa_card.pci-0000:01:00.1 output:hdmi-stereo

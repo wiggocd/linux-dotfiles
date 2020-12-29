@@ -1,0 +1,19 @@
+#!/bin/sh
+
+showUsage() {
+	BASENAME=$(basename $0)
+	echo -e "\nCopies a wallpaper to ~/.config and sets it using hsetroot."
+	echo -e "Usage: $BASENAME <path to wallpaper>\n"
+}
+
+if [ -z "$1" ]
+then
+	showUsage
+	exit
+fi
+
+
+FORMAT=$(echo $1 | rev | cut -d'.' -f1 | rev)
+DESTINATION=~/.config/wallpaper.$FORMAT
+cp $1 $DESTINATION
+hsetroot -cover $DESTINATION

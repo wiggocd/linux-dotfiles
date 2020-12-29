@@ -48,10 +48,9 @@ immutability=1
 plugin=org.kde.plasma.digitalclock.wl
 
 [Containments][1][Applets][7][Configuration]
-PreloadWeight=14
+PreloadWeight=0
 
 [Containments][1][Applets][7][Configuration][Appearance]
-bold=false
 clockFontSize=12
 marginSize=56
 
@@ -74,7 +73,7 @@ appletOrder=6;4;7
 appletShadowsEnabled=false
 iconSize=25
 panelSize=100
-panelTransparency=15
+panelTransparency=40
 shadowOpacity=60
 shadowSize=25
 shadows=All
@@ -130,13 +129,14 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][12][Applets][41][Configuration]
-PreloadWeight=92
+PreloadWeight=68
 
 [Containments][12][Applets][41][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][12][Applets][41][Configuration][General]
+favoriteSystemActions=logout
 favoritesPortedToKAstats=true
 
 [Containments][12][ConfigDialog]
@@ -156,7 +156,7 @@ iconSize=25
 inConfigureAppletsMode=true
 isStickedOnBottomEdge=true
 panelSize=100
-panelTransparency=15
+panelTransparency=40
 shadowOpacity=60
 shadowSize=25
 shadows=All
@@ -176,10 +176,13 @@ type=org.kde.latte.unity
 enabledForApplets=false
 
 [LayoutSettings]
+activities={free-activities}
 backgroundStyle=0
 color=blue
 customBackground=
 customTextColor=fcfcfc
+disableBordersForMaximizedWindows=false
+icon=
 lastUsedActivity=9a2426c1-70ff-49d3-a82e-80450618a427
 launchers=
 preferredForShortcutsTouched=false

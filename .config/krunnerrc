@@ -1,0 +1,5 @@
+[General]
+history=konsole,latte,kons,gedit
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_applications:org.kde.konsole.desktop

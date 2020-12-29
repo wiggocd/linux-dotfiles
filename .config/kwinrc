@@ -15,6 +15,11 @@ BorderActivateAll=9
 [ElectricBorders]
 TopLeft=None
 
+[NightColor]
+Active=true
+LatitudeAuto=51.2604
+LongitudeAuto=-1.0825
+
 [Plugins]
 highlightwindowEnabled=true
 kwin4_effect_translucencyEnabled=false

@@ -1,0 +1,9 @@
+[$Version]
+update_info=spectacle_newConfig.upd:spectacle-new-config
+
+[GuiConfig]
+window-position=52,50
+
+[Save]
+lastSaveAsLocation=file:///home/cwiggins/dev/linux-dotfiles/screenshots/i3_1.png
+lastSaveLocation=file:///home/cwiggins/dev/linux-dotfiles/screenshots/i3_1.png

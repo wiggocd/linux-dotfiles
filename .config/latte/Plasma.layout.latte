@@ -1,11 +1,14 @@
 [ActionPlugins][1]
-RightButton;NoModifier=org.kde.contextmenu
+RightButton;NoModifier=org.kde.latte.contextmenu
 
 [Containments][1]
 activityId=
+byPassWM=false
 dockWindowBehavior=true
+enableKWinEdges=true
 formfactor=2
 immutability=1
+isPreferredForShortcuts=false
 lastScreen=-1
 location=4
 onPrimary=true
@@ -14,6 +17,7 @@ raiseOnActivityChange=false
 raiseOnDesktopChange=false
 timerHide=700
 timerShow=200
+viewType=0
 visibility=2
 wallpaperplugin=org.kde.image
 
@@ -21,31 +25,44 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.analogclock
 
+[Containments][1][Applets][3][Configuration]
+PreloadWeight=34
+
 [Containments][1][Applets][4]
 immutability=1
 plugin=org.kde.plasma.kickoff
 
+[Containments][1][Applets][4][Configuration]
+PreloadWeight=84
+
 [Containments][1][Applets][4][Configuration][General]
 favorites=preferred://browser,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.kate.desktop,org.kde.discover.desktop
+favoritesPortedToKAstats=true
 
 [Containments][1][Applets][5]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
+PreloadWeight=34
 SystrayContainmentId=6
 
 [Containments][1][Applets][57]
 immutability=1
 plugin=org.kde.latte.plasmoid
 
+[Containments][1][Applets][57][Configuration]
+PreloadWeight=34
+
 [Containments][1][Applets][57][Configuration][General]
-isInLatteDock=true
 launchers59=applications:firefox.desktop,applications:org.kde.dolphin.desktop
 
 [Containments][1][ConfigDialog]
 DialogHeight=600
 DialogWidth=586
+
+[Containments][1][Configuration]
+PreloadWeight=34
 
 [Containments][1][General]
 advanced=false
@@ -60,13 +77,21 @@ panelPosition=10
 panelSize=100
 shadowOpacity=35
 shadowSize=45
+shadowsUpgraded=true
 showGlow=false
 shrinkThickMargins=true
 splitterPosition=3
 splitterPosition2=4
+tasksUpgraded=true
 zoomLevel=0
 
+[Containments][1][Indicator]
+customType=
+enabled=true
+type=org.kde.latte.default
+
 [Containments][6]
+PreloadWeight=34
 activityId=
 formfactor=2
 immutability=1
@@ -79,50 +104,65 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
+[Containments][6][Applets][10][Configuration]
+PreloadWeight=34
+
 [Containments][6][Applets][11]
 immutability=1
 plugin=org.kde.plasma.notifications
 
-[Containments][6][Applets][12]
-immutability=1
-plugin=org.kde.plasma.printmanager
+[Containments][6][Applets][11][Configuration]
+PreloadWeight=34
 
 [Containments][6][Applets][13]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
+[Containments][6][Applets][13][Configuration]
+PreloadWeight=34
+
 [Containments][6][Applets][14]
 immutability=1
 plugin=org.kde.plasma.battery
 
-[Containments][6][Applets][16]
-immutability=1
-plugin=org.kde.plasma.networkmanagement
+[Containments][6][Applets][14][Configuration]
+PreloadWeight=34
 
-[Containments][6][Applets][17]
+[Containments][6][Applets][58]
 immutability=1
-plugin=org.kde.plasma.bluetooth
+plugin=org.kde.plasma.keyboardindicator
 
-[Containments][6][Applets][43]
-immutability=1
-plugin=org.kde.discovernotifier
+[Containments][6][Applets][58][Configuration]
+PreloadWeight=34
 
-[Containments][6][Applets][7]
+[Containments][6][Applets][59]
 immutability=1
-plugin=org.kde.kdeconnect
+plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][6][Applets][59][Configuration]
+PreloadWeight=34
 
 [Containments][6][Applets][9]
 immutability=1
 plugin=org.kde.plasma.volume
 
+[Containments][6][Applets][9][Configuration]
+PreloadWeight=34
+
 [Containments][6][General]
-extraItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
-knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier
+extraItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardindicator
+knownItems=org.kde.plasma.networkmanagement,org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.discovernotifier,org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardindicator
 
 [LayoutSettings]
 activities=
+backgroundStyle=0
 color=lightskyblue
+customBackground=
+customTextColor=
 globalLaunchers=
+icon=
+lastUsedActivity=9a2426c1-70ff-49d3-a82e-80450618a427
 launchers=
+preferredForShortcutsTouched=false
 showInMenu=true
 version=2

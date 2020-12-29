@@ -192,9 +192,9 @@ for_window [window_role="task_dialog"] floating enable
 # Miscellaneous keybinds
 #
 bindcode --release 133 exec --no-startup-id ~/scripts/appmenu
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkil -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle && pkil -RTMIN+1 i3blocks
 
 bindsym Control+Mod1+s exec i3lock-fancy & systemctl suspend
 bindsym Control+Mod1+p exec systemctl poweroff
@@ -202,6 +202,10 @@ bindsym Control+Mod1+l exec i3lock-fancy
 bindsym Control+Mod1+r exec reboot
 
 bindsym Control+Mod1+1 exec firefox &
+
+# Mousewheel
+bindsym $mod+x workspace next
+bindsym $mod+c workspace prev
 
 # Autoexec
 #

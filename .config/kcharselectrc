@@ -1,0 +1,10 @@
+[General]
+char=0
+rtl=false
+selectedFont=Font Awesome 5 Free,10,-1,5,50,0,0,0,0,0
+
+[MainWindow]
+Height 1080=512
+State=AAAA/wAAAAD9AAAAAAAAA64AAAHiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=942
