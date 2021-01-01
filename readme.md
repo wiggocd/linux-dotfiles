@@ -25,21 +25,21 @@ Configuration for Arch Linux kernel version 5.9.14
 - openbox
 
 # Packages
-`i3-wm` `alacritty` `rofi` `hsetroot` `polybar` `python3` `qt5ct` `lxappearance` `i3lock-fancy` `plasma-meta` `ly`
+`i3-wm` `alacritty` `rofi` `hsetroot` `python` `python-pip` `qt5ct` `lxappearance` `i3lock` `plasma-meta`
 
-AUR: `picom-ibhagwan-git`
+AUR: `polybar` `picom-ibhagwan-git` `ly`
 
 AUR helper used: `pikaur`
 
 # Usage
 - Install the packages which you require
-- ***Run `./install.sh`. This will overwrite your current terminal configuration and some other configuration files***
-- Run `systemctl enable ly.service` to get a text-based desktop manager
+- ***Run `./install.sh`. This will overwrite your current terminal configuration and other configuration files***
+- Run `systemctl enable ly.service` to get a text-based display manager
 ____
 
 - Use `lxappearance` and `qt5ct` to set themes
 - To fix application theming when switching to Plasma, remove the line `export QT_QPA_PLATFORMTHEME=...` from `.xinitrc`. Keep this when using other WMs
-- To use the Firefox configuration, go to Firefox > about:config > search for stylesheets and enable the legacy profiles option
+- To use the Firefox confimkdir guration, go to Firefox > about:config > search for stylesheets and enable the legacy profiles option
 
 # i3 Bindings
 
